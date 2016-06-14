@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Hugo Santos <hugo.santos@factorlibre.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+  <data>
+    <record id="account_trial_balance_view_webkit" model="ir.ui.view">
+        <field name="name">Trial Balance</field>
+        <field name="model">trial.balance.webkit</field>
+        <field name="inherit_id"
+            ref="account_financial_report_webkit.account_trial_balance_view_webkit"/>
+        <field name="arch" type="xml">
+            <button string="Print" position="before">
+              <p>
+                <label for="calculate_in_background"/>
+                <field name="calculate_in_background"/>
+              </p>
+            </button>
+        </field>
+    </record>
+  </data>
+</openerp>

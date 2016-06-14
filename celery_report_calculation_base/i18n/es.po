@@ -1,0 +1,178 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* celery_report_calculation_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-11 14:20+0000\n"
+"PO-Revision-Date: 2016-10-11 16:25+0100\n"
+"Last-Translator: Hugo Santos <hugo.santos@factorlibre.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation.result,args:0
+msgid "ARGS"
+msgstr "ARGS"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation.result,args_hash:0
+msgid "Args Hash"
+msgstr "Hash de argumentos"
+
+#. module: celery_report_calculation_base
+#: model:ir.ui.menu,name:celery_report_calculation_base.report_calculation_menu_parent
+msgid "Calculated Reports"
+msgstr "Informes calculados"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation.result,calculation_id:0
+msgid "Calculation"
+msgstr "Calculos"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation.result,calculation_date:0
+msgid "Calculation Date"
+msgstr "Fecha de cálculo"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,calculation_result_ids:0
+msgid "Calculation Results"
+msgstr "Resultados cálculo"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,create_uid:0
+#: field:report.calculation.result,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,create_date:0
+#: field:report.calculation.result,create_date:0
+msgid "Creation Date"
+msgstr "Fecha de creación"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,display_name:0
+#: field:report.calculation.result,display_name:0
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: celery_report_calculation_base
+#: view:report.calculation:celery_report_calculation_base.report_calculation_form_view
+msgid "Enque Calculations"
+msgstr "Encolar cálculos"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation.result,enqueued_date:0
+msgid "Enqueued Date"
+msgstr "Fecha de encolado"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,enqueued_print_task:0
+msgid "Enqueued Print UUID"
+msgstr "UUID de encolado de impresión"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation.result,function:0
+msgid "Function"
+msgstr "Función"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,id:0 field:report.calculation.result,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation.result,kwargs:0
+msgid "KWARGS"
+msgstr "KWARGS"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,__last_update:0
+#: field:report.calculation.result,__last_update:0
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,write_uid:0
+#: field:report.calculation.result,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,write_date:0
+#: field:report.calculation.result,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,print_date:0
+msgid "Print Date"
+msgstr "Fecha de impresión"
+
+#. module: celery_report_calculation_base
+#: view:report.calculation:celery_report_calculation_base.report_calculation_form_view
+msgid "Print Report"
+msgstr "Imprimir Informe"
+
+#. module: celery_report_calculation_base
+#: view:report.calculation:celery_report_calculation_base.report_calculation_form_view
+msgid "Print Report (Queued)"
+msgstr "Imprimir informe (Encolado)"
+
+#. module: celery_report_calculation_base
+#: model:ir.actions.act_window,name:celery_report_calculation_base.report_calculation_action
+#: model:ir.ui.menu,name:celery_report_calculation_base.report_calculation_menu
+#: view:report.calculation:celery_report_calculation_base.report_calculation_form_view
+#: view:report.calculation:celery_report_calculation_base.report_calculation_tree_view
+msgid "Report Calculation"
+msgstr "Informes calculados"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,report_class:0
+msgid "Report Class"
+msgstr "Clase de informe"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,report_context:0
+msgid "Report Context"
+msgstr "Contexto de informe"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,report_data:0
+msgid "Report Data"
+msgstr "Datos de informe"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,report_name:0
+msgid "Report Name"
+msgstr "Nombre de informe"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation.result,result:0
+msgid "Result"
+msgstr "Resultado"
+
+#. module: celery_report_calculation_base
+#: field:report.calculation,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: celery_report_calculation_base
+#: view:report.calculation:celery_report_calculation_base.report_calculation_form_view
+#: view:report.calculation.result:celery_report_calculation_base.report_calculation_result_form_view
+#: view:report.calculation.result:celery_report_calculation_base.report_calculation_result_tree_view
+msgid "Tasks"
+msgstr "Tareas"
+
+#. module: celery_report_calculation_base
+#: view:report.calculation.result:celery_report_calculation_base.report_calculation_result_form_view
+msgid "requeue"
+msgstr "Reencolar"

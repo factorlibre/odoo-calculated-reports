@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="report_calculation_enqueue" model="ir.cron">
+            <field name="name">Report Calculation Enqueue</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number" eval="1"/>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall" eval="-1"/>
+            <field name="doall" eval="False"/>
+            <field name="model">report.calculation</field>
+            <field name="function">enqueue_report_calculation</field>
+            <field name="args">()</field>
+        </record>
+        <record id="report_calculation_print" model="ir.cron">
+            <field name="name">Report Calculation Print</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number" eval="1"/>
+            <field name="interval_type">hours</field>
+            <field name="numbercall" eval="-1"/>
+            <field name="doall" eval="False"/>
+            <field name="model">report.calculation</field>
+            <field name="function">enqueue_report_print</field>
+            <field name="args">()</field>
+        </record>
+    </data>
+</openerp>

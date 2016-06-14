@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Hugo Santos <hugo.santos@factorlibre.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+    <data>
+        <record id="account_financial_report_webkit.account_report_general_ledger_webkit"
+                model="ir.actions.report.xml">
+            <field name="report_rml">account_financial_report_webkit_calculation/report/templates/account_report_general_ledger.mako</field>
+            <field name="report_file">account_financial_report_webkit_calculation/report/templates/account_report_general_ledger.mako</field>
+        </record>
+
+        <record id="account_financial_report_webkit.account_report_partners_ledger_webkit"
+                model="ir.actions.report.xml">
+            <field name="report_rml">account_financial_report_webkit_calculation/report/templates/account_report_partners_ledger.mako</field>
+            <field name="report_file">account_financial_report_webkit_calculation/report/templates/account_report_partners_ledger.mako</field>
+        </record>
+    </data>
+</openerp>

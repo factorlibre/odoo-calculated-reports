@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Hugo Santos <hugo.santos@factorlibre.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+  <record id="report_calculation_result_tree_view" model="ir.ui.view">
+    <field name="name">report.calculation.result.tree</field>
+    <field name="model">report.calculation.result</field>
+    <field name="type">tree</field>
+    <field name="arch" type="xml">
+      <tree string="Tasks">
+        <field name="function"/>
+        <field name="create_date"/>
+        <field name="enqueued_date"/>
+        <field name="calculation_date"/>
+      </tree>
+    </field>
+  </record>
+
+<record id="report_calculation_result_form_view" model="ir.ui.view">
+  <field name="name">report.calculation.result.form</field>
+  <field name="model">report.calculation.result</field>
+  <field name="arch" type="xml">
+    <form string="Tasks">
+      <field name="function"/>
+      <field name="create_date"/>
+      <field name="enqueued_date"/>
+      <field name="calculation_date"/>
+      <button name="get_function_result" type="object"
+        string="requeue"/>
+    </form>
+  </field>
+</record>
+
+<record id="report_calculation_tree_view" model="ir.ui.view">
+    <field name="name">report.calculation.tree</field>
+    <field name="model">report.calculation</field>
+    <field name="type">tree</field>
+    <field name="arch" type="xml">
+        <tree string="Report Calculation">
+            <field name="report_name"/>
+            <field name="create_date"/>
+            <field name="print_date"/>
+            <field name="state"/>
+        </tree>
+    </field>
+</record>
+
+
+<record id="report_calculation_form_view" model="ir.ui.view">
+    <field name="name">report.calculation.form</field>
+    <field name="model">report.calculation</field>
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+        <form string="Report Calculation">
+          <header>
+            <field name="state" widget="statusbar"
+                statusbar_visible="draft,processing,done_calculation,printed"
+                statusbar_colors='{"printed":"red"}'/>
+          </header>
+          <sheet>
+            <group>
+              <group>
+                <field name="report_name"/>
+                <field name="create_date"/>
+                <field name="print_date"/>
+              </group>
+              <group>
+                <button name="enqueue_calculations" type="object"
+                    string="Enque Calculations" states="draft"/>
+                <button name="print_report" type="object"
+                    string="Print Report" states="done_calculation,printed"/>
+                <button name="print_report" type="object"
+                    string="Print Report (Queued)"
+                    states="done_calculation,printed"
+                    context="{'print_queue': True}"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Tasks">
+                <field name="calculation_result_ids" readonly="1"/>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+    </field>
+</record>
+
+<record id="report_calculation_action" model="ir.actions.act_window">
+    <field name="name">Report Calculation</field>
+    <field name="res_model">report.calculation</field>
+    <field name="model">ir.actions.act_window</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+    <field name="view_id" ref="report_calculation_tree_view"/>
+</record>
+
+<menuitem name="Calculated Reports" id="report_calculation_menu_parent"
+    parent="base.menu_reporting" sequence="10"/>
+<menuitem id="report_calculation_menu" action="report_calculation_action"
+    parent="report_calculation_menu_parent"/>
+
+</data>
+</openerp>
